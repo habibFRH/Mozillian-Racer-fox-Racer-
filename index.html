@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+<!---->
+
+    <title>Mozillian racer</title>
+  <link rel="icon" href="icon.png">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+    />
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <!--custom console-->
+    <script>
+      window.console = window.console || function (t) {};
+    <!--check URL y-->
+    </script>
+
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+  </head>
+
+  <body >
+    <!--game-->
+    <div id="game">
+      <div id="road">
+        <div id="cloud"></div>
+        <div id="hero"></div>
+      </div>
+
+      <div id="hud">
+        <span id="time" class="topUI">0</span>
+        <span id="score" class="topUI">0</span>
+        <span id="lap" class="topUI">0'00"000</span>
+        <span id="tacho">0</span>
+      </div>
+
+      <div id="home">
+        <div class="center-text">
+          <h1>Mozillian</h1>
+          <h1>Racer</h1>
+      </div>      
+        <br>
+        <p id="text"></p>
+        <div id="highscore"></div>
+      </div>
+    </div>
+
+
+    <!--Controls-->
+    <div id="controls">
+      <span><span>C</span>insert coin</span>
+      <span><span>&lt;</span><span>&gt;</span>move</span>
+      <span><span>&lt;</span><span>&gt;</span>accelerate</span>
+    </div>
+
+    <div id="event">
+      <h1>CodeGenesis games
+        <img id="fox" alt="fox" src="./images/fox.png"/>
+      </h1>
+    </div>
+
+    <script src="javascript/1.js"></script>
+    <script src="javascript/render.js"></script>
+    <script src="javascript/null.js"></script>
+  </body>
+</html>
